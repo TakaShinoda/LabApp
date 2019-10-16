@@ -1,4 +1,4 @@
 # LabApp
 
-##pages
+## pages
 Next.jsのWebページ配置
