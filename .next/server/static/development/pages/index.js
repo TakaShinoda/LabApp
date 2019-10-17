@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Footer.js":
-/*!******************************!*\
-  !*** ./components/Footer.js ***!
-  \******************************/
+/***/ "./components/Footer.jsx":
+/*!*******************************!*\
+  !*** ./components/Footer.jsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,7 +104,7 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Footer.js";
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Footer.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -131,10 +131,10 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./components/Header.js":
-/*!******************************!*\
-  !*** ./components/Header.js ***!
-  \******************************/
+/***/ "./components/Header.jsx":
+/*!*******************************!*\
+  !*** ./components/Header.jsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -142,7 +142,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Header.js";
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Header.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -175,10 +175,10 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./components/Layout.js":
-/*!******************************!*\
-  !*** ./components/Layout.js ***!
-  \******************************/
+/***/ "./components/Layout.jsx":
+/*!*******************************!*\
+  !*** ./components/Layout.jsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -186,10 +186,10 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.jsx");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./components/Footer.jsx");
 /* harmony import */ var _static_Style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/Style */ "./static/Style.js");
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Layout.js";
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Layout.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -204,7 +204,7 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 9
       },
       __self: this
-    }, _static_Style__WEBPACK_IMPORTED_MODULE_3__["default"], __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, _static_Style__WEBPACK_IMPORTED_MODULE_3__["default"], __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
       header: this.props.header,
       title: this.props.title,
       __source: {
@@ -212,7 +212,7 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 11
       },
       __self: this
-    }), this.props.children, __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
       footer: "footerhogehoge",
       __source: {
         fileName: _jsxFileName,
@@ -1929,7 +1929,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 var _jsxFileName = "/Users/shinoda/Desktop/LabApp/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1949,26 +1949,39 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 6
   },
   __self: undefined
-}, "hoge"), __jsx("hr", {
+}, "hoge"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "./contact",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
+  },
+  __self: undefined
+}, __jsx("a", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8
+  },
+  __self: undefined
+}, "\u9023\u7D61\u677F >>")), __jsx("br", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
   },
   __self: undefined
 }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "./other",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 11
   },
   __self: undefined
-}, __jsx("button", {
+}, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 12
   },
   __self: undefined
-}, "go to other >>"))));
+}, " \u30B4\u30DF\u30ED\u30FC\u30C6 >>"))));
 
 /***/ }),
 
@@ -2016,7 +2029,7 @@ footer {
     left: 10px;
 }
 h1 {
-    font-size:68pt;
+    font-size:64pt;
     font-weight:bold;
     text-align:right;
     letter-spacing:-8px;
@@ -2032,7 +2045,7 @@ p {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

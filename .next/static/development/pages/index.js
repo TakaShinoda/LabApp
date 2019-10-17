@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./components/Footer.js":
-/*!******************************!*\
-  !*** ./components/Footer.js ***!
-  \******************************/
+/***/ "./components/Footer.jsx":
+/*!*******************************!*\
+  !*** ./components/Footer.jsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Footer.js";
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Footer.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -62,10 +62,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./components/Header.js":
-/*!******************************!*\
-  !*** ./components/Header.js ***!
-  \******************************/
+/***/ "./components/Header.jsx":
+/*!*******************************!*\
+  !*** ./components/Header.jsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -83,7 +83,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Header.js";
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Header.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -130,10 +130,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./components/Layout.js":
-/*!******************************!*\
-  !*** ./components/Layout.js ***!
-  \******************************/
+/***/ "./components/Layout.jsx":
+/*!*******************************!*\
+  !*** ./components/Layout.jsx ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -146,15 +146,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Header */ "./components/Header.jsx");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer */ "./components/Footer.jsx");
 /* harmony import */ var _static_Style__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../static/Style */ "./static/Style.js");
 
 
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Layout.js";
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Layout.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -181,7 +181,7 @@ function (_Component) {
           lineNumber: 9
         },
         __self: this
-      }, _static_Style__WEBPACK_IMPORTED_MODULE_8__["default"], __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }, _static_Style__WEBPACK_IMPORTED_MODULE_8__["default"], __jsx(_Header__WEBPACK_IMPORTED_MODULE_6__["default"], {
         header: this.props.header,
         title: this.props.title,
         __source: {
@@ -189,7 +189,7 @@ function (_Component) {
           lineNumber: 11
         },
         __self: this
-      }), this.props.children, __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
         footer: "footerhogehoge",
         __source: {
           fileName: _jsxFileName,
@@ -10400,7 +10400,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 var _jsxFileName = "/Users/shinoda/Desktop/LabApp/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -10421,26 +10421,39 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 6
     },
     __self: this
-  }, "hoge"), __jsx("hr", {
+  }, "hoge"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "./contact",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
+    },
+    __self: this
+  }, __jsx("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "\u9023\u7D61\u677F >>")), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
     },
     __self: this
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "./other",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 11
     },
     __self: this
-  }, __jsx("button", {
+  }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 12
     },
     __self: this
-  }, "go to other >>")));
+  }, " \u30B4\u30DF\u30ED\u30FC\u30C6 >>")));
 });
 
 /***/ }),
@@ -10465,11 +10478,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 2
   },
   __self: undefined
-}, "\nbody {\n    margin: 10px;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:68pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#f0f0f0;\n    margin:-32px 0px;\n}\np {\n    margin:0px;\n    color:#666;\n    font-size:16pt;\n}\n"));
+}, "\nbody {\n    margin: 10px;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#f0f0f0;\n    margin:-32px 0px;\n}\np {\n    margin:0px;\n    color:#666;\n    font-size:16pt;\n}\n"));
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Findex.js ***!
   \*************************************************************************************************************************/
@@ -10492,5 +10505,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

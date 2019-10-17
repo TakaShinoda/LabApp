@@ -23,7 +23,7 @@ footer {
     left: 10px;
 }
 h1 {
-    font-size:68pt;
+    font-size:64pt;
     font-weight:bold;
     text-align:right;
     letter-spacing:-8px;

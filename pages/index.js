@@ -4,11 +4,12 @@ import Layout from '../components/Layout';
 export default () => (
     <Layout header='header' title='title'>
         <p>hoge</p>
-        <hr />
+        <Link href='./contact'>
+            <a>連絡板 &gt;&gt;</a>
+        </Link>
+        <br />
         <Link href='./other'>
-            <button>
-                go to other &gt;&gt;
-            </button>
+            <a> ゴミローテ &gt;&gt;</a>
         </Link>
     </Layout>
 );
