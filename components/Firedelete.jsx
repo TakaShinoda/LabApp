@@ -14,14 +14,17 @@ class Firedelete extends Component {
     }
 
     doChange(e) {
-        alert('hoge');
         this.setState({
             id_str: e.target.value
         })
     }
 
     doAction(e) {
-        this.deleteFireData();
+        let result = confirm('本当に削除してよろしいでしょうか？');
+        if(result) {
+            this.deleteFireData();
+        } else{
+        }
         Router.push('/contact_board');
     }
 
@@ -35,12 +38,11 @@ class Firedelete extends Component {
     render() {
         return (
             <div>
-                <p>削除する項目のID入力</p>
-                <p>※現在未入力のままボタンクリックNG</p>
-                <input type='text' placeholder='delete ID:' onChange={this.doChange} value={this.state.id_str} />
-                <button onClick={this.doAction}>
-                    削除
-                </button>
+                <p>削除する項目のID入力(半角数字)</p>
+                <form onSubmit={this.doAction}>
+                <input type='text' placeholder='delete ID:' onChange={this.doChange} value={this.state.id_str} required pattern='[0-9]+' />
+                <input type='submit' value='削除' />
+                </form>
             </div>
         );
     }

@@ -2039,9 +2039,9 @@ h1 {
     margin:-50px 0px 50px 0px;
 }
 p {
-      margin:0px;
-      color:#669;
-      font-size:16pt;
+    margin:0px;
+    color:#669;
+    font-size:16pt;
 }  
 hr {
     margin:25px 0px;
@@ -2051,19 +2051,25 @@ tr {
 }
 th {
     font-size:14pt;
-    font-weight:plain;
+    font-weight:100;
     text-align:left;
-    padding:0px 20px;
+    padding:0px 5px;
     margin:0px;
-    border-bottom:1px solid gray;
 }
 td {
     font-size:14pt;
     font-weight:plain;
-    text-align:right;
+    text-align:left;
     padding:0px 20px;
     margin:0px;
-    border-bottom:1px solid gray;
+    border:solid 1px #99c;
+    border-radius: 1em;
+    background-color:#e0ffff;
+}
+table {
+    margin: 30px 30px;
+    padding: 10px;
+    border: medium inset #99c;
 }
 `));
 

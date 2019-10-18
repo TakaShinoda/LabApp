@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -128,14 +128,18 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   doChange(e) {
-    alert('hoge');
     this.setState({
       id_str: e.target.value
     });
   }
 
   doAction(e) {
-    this.deleteFireData();
+    let result = confirm('本当に削除してよろしいでしょうか？');
+
+    if (result) {
+      this.deleteFireData();
+    } else {}
+
     next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/contact_board');
   }
 
@@ -150,44 +154,167 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 40
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 41
       },
       __self: this
-    }, "\u524A\u9664\u3059\u308B\u9805\u76EE\u306EID\u5165\u529B"), __jsx("p", {
+    }, "\u524A\u9664\u3059\u308B\u9805\u76EE\u306EID\u5165\u529B(\u534A\u89D2\u6570\u5B57)"), __jsx("form", {
+      onSubmit: this.doAction,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 42
       },
       __self: this
-    }, "\u203B\u73FE\u5728\u672A\u5165\u529B\u306E\u307E\u307E\u30DC\u30BF\u30F3\u30AF\u30EA\u30C3\u30AFNG"), __jsx("input", {
+    }, __jsx("input", {
       type: "text",
       placeholder: "delete ID:",
       onChange: this.doChange,
       value: this.state.id_str,
+      required: true,
+      pattern: "[0-9]+",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 43
       },
       __self: this
-    }), __jsx("button", {
-      onClick: this.doAction,
+    }), __jsx("input", {
+      type: "submit",
+      value: "\u524A\u9664",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 44
       },
       __self: this
-    }, "\u524A\u9664"));
+    })));
   }
 
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Firedelete);
+
+/***/ }),
+
+/***/ "./components/Firelist.jsx":
+/*!*********************************!*\
+  !*** ./components/Firelist.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase */ "firebase");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ "firebase/storage");
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_storage__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Firelist.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+class Firelist extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+    this.getFireData();
+  }
+
+  getFireData() {
+    let db = firebase__WEBPACK_IMPORTED_MODULE_1___default.a.database();
+    let ref = db.ref("sample/");
+    let self = this;
+    ref.orderByKey().limitToLast(10).on("value", snapshot => {
+      self.setState({
+        data: snapshot.val()
+      });
+    });
+  }
+
+  getTableData() {
+    let result = [];
+
+    if (this.state.data == null || this.state.data.length == 0) {
+      return [__jsx("tr", {
+        key: "0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, __jsx("th", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, "NO DATA"))];
+    }
+
+    for (let i in this.state.data) {
+      result.push(__jsx("tr", {
+        key: i,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, __jsx("th", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, this.state.data[i].ID), __jsx("td", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, this.state.data[i].message), __jsx("th", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, this.state.data[i].date)));
+    }
+
+    return result;
+  }
+
+  render() {
+    if (this.state.data.length == 0) {
+      this.getFireData();
+    }
+
+    return __jsx("table", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, __jsx("tbody", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, this.getTableData()));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Firelist);
 
 /***/ }),
 
@@ -2029,9 +2156,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 /* harmony import */ var _components_Firedelete__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Firedelete */ "./components/Firedelete.jsx");
+/* harmony import */ var _components_Firelist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Firelist */ "./components/Firelist.jsx");
 var _jsxFileName = "/Users/shinoda/Desktop/LabApp/pages/contact_del.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2040,26 +2169,32 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   title: "\u6295\u7A3F\u524A\u9664",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 9
   },
   __self: undefined
 }, __jsx(_components_Firedelete__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 10
+  },
+  __self: undefined
+}), __jsx(_components_Firelist__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
   },
   __self: undefined
 }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/contact_board",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 13
   },
   __self: undefined
 }, "<< \u623B\u308B"))));
@@ -2120,9 +2255,9 @@ h1 {
     margin:-50px 0px 50px 0px;
 }
 p {
-      margin:0px;
-      color:#669;
-      font-size:16pt;
+    margin:0px;
+    color:#669;
+    font-size:16pt;
 }  
 hr {
     margin:25px 0px;
@@ -2132,25 +2267,31 @@ tr {
 }
 th {
     font-size:14pt;
-    font-weight:plain;
+    font-weight:100;
     text-align:left;
-    padding:0px 20px;
+    padding:0px 5px;
     margin:0px;
-    border-bottom:1px solid gray;
 }
 td {
     font-size:14pt;
     font-weight:plain;
-    text-align:right;
+    text-align:left;
     padding:0px 20px;
     margin:0px;
-    border-bottom:1px solid gray;
+    border:solid 1px #99c;
+    border-radius: 1em;
+    background-color:#e0ffff;
+}
+table {
+    margin: 30px 30px;
+    padding: 10px;
+    border: medium inset #99c;
 }
 `));
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!************************************!*\
   !*** multi ./pages/contact_del.js ***!
   \************************************/

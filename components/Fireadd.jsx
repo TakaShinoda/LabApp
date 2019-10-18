@@ -59,10 +59,12 @@ class Fireadd extends Component {
         }
         let id = this.state.lastID * 1 + 1;
         let db = firebase.database();
+        let date = new Date().toString().slice(4,24);
         let ref = db.ref('/sample/' + id);
         ref.set({
             ID: id,
             message: this.state.msg_str,
+            date: date
         });
     }
 

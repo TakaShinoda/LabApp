@@ -57,7 +57,6 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Firedelete, [{
     key: "doChange",
     value: function doChange(e) {
-      alert('hoge');
       this.setState({
         id_str: e.target.value
       });
@@ -65,7 +64,12 @@ function (_Component) {
   }, {
     key: "doAction",
     value: function doAction(e) {
-      this.deleteFireData();
+      var result = confirm('本当に削除してよろしいでしょうか？');
+
+      if (result) {
+        this.deleteFireData();
+      } else {}
+
       next_router__WEBPACK_IMPORTED_MODULE_8___default.a.push('/contact_board');
     }
   }, {
@@ -82,39 +86,43 @@ function (_Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 40
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 41
         },
         __self: this
-      }, "\u524A\u9664\u3059\u308B\u9805\u76EE\u306EID\u5165\u529B"), __jsx("p", {
+      }, "\u524A\u9664\u3059\u308B\u9805\u76EE\u306EID\u5165\u529B(\u534A\u89D2\u6570\u5B57)"), __jsx("form", {
+        onSubmit: this.doAction,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 42
         },
         __self: this
-      }, "\u203B\u73FE\u5728\u672A\u5165\u529B\u306E\u307E\u307E\u30DC\u30BF\u30F3\u30AF\u30EA\u30C3\u30AFNG"), __jsx("input", {
+      }, __jsx("input", {
         type: "text",
         placeholder: "delete ID:",
         onChange: this.doChange,
         value: this.state.id_str,
+        required: true,
+        pattern: "[0-9]+",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 43
         },
         __self: this
-      }), __jsx("button", {
-        onClick: this.doAction,
+      }), __jsx("input", {
+        type: "submit",
+        value: "\u524A\u9664",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 44
         },
         __self: this
-      }, "\u524A\u9664"));
+      })));
     }
   }]);
 
@@ -122,6 +130,151 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Firedelete);
+
+/***/ }),
+
+/***/ "./components/Firelist.jsx":
+/*!*********************************!*\
+  !*** ./components/Firelist.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/index.esm.js");
+
+
+
+
+
+var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Firelist.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+
+
+
+var Firelist =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Firelist, _Component);
+
+  function Firelist(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Firelist);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Firelist).call(this, props));
+    _this.state = {
+      data: []
+    };
+
+    _this.getFireData();
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Firelist, [{
+    key: "getFireData",
+    value: function getFireData() {
+      var db = firebase__WEBPACK_IMPORTED_MODULE_6___default.a.database();
+      var ref = db.ref("sample/");
+      var self = this;
+      ref.orderByKey().limitToLast(10).on("value", function (snapshot) {
+        self.setState({
+          data: snapshot.val()
+        });
+      });
+    }
+  }, {
+    key: "getTableData",
+    value: function getTableData() {
+      var result = [];
+
+      if (this.state.data == null || this.state.data.length == 0) {
+        return [__jsx("tr", {
+          key: "0",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32
+          },
+          __self: this
+        }, __jsx("th", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          },
+          __self: this
+        }, "NO DATA"))];
+      }
+
+      for (var i in this.state.data) {
+        result.push(__jsx("tr", {
+          key: i,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          },
+          __self: this
+        }, __jsx("th", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40
+          },
+          __self: this
+        }, this.state.data[i].ID), __jsx("td", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          },
+          __self: this
+        }, this.state.data[i].message), __jsx("th", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, this.state.data[i].date)));
+      }
+
+      return result;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.state.data.length == 0) {
+        this.getFireData();
+      }
+
+      return __jsx("table", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, __jsx("tbody", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, this.getTableData()));
+    }
+  }]);
+
+  return Firelist;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Firelist);
 
 /***/ }),
 
@@ -63111,9 +63264,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 /* harmony import */ var _components_Firedelete__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Firedelete */ "./components/Firedelete.jsx");
+/* harmony import */ var _components_Firelist__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Firelist */ "./components/Firelist.jsx");
 var _jsxFileName = "/Users/shinoda/Desktop/LabApp/pages/contact_del.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -63123,26 +63278,32 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     title: "\u6295\u7A3F\u524A\u9664",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, __jsx(_components_Firedelete__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
+    },
+    __self: this
+  }), __jsx(_components_Firelist__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
     },
     __self: this
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/contact_board",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, "<< \u623B\u308B")));
@@ -63170,11 +63331,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 4
   },
   __self: undefined
-}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#77a;\n    margin:-50px 0px 50px 0px;\n}\np {\n      margin:0px;\n      color:#669;\n      font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border-bottom:1px solid gray;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:right;\n    padding:0px 20px;\n    margin:0px;\n    border-bottom:1px solid gray;\n}\n"));
+}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#77a;\n    margin:-50px 0px 50px 0px;\n}\np {\n    margin:0px;\n    color:#669;\n    font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:100;\n    text-align:left;\n    padding:0px 5px;\n    margin:0px;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border:solid 1px #99c;\n    border-radius: 1em;\n    background-color:#e0ffff;\n}\ntable {\n    margin: 30px 30px;\n    padding: 10px;\n    border: medium inset #99c;\n}\n"));
 
 /***/ }),
 
-/***/ 0:
+/***/ 3:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact_del&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_del.js ***!
   \******************************************************************************************************************************************/
@@ -63197,5 +63358,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact_del.js.map

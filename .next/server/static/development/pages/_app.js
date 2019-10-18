@@ -1938,7 +1938,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_2__);
 
 
- // Firebaseの初期化
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKzOZ9OY-eYsxHBfgE5VNH4yCnMRDOiHc",
@@ -1957,9 +1956,8 @@ try {
   console.log(error.message);
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (fireapp); // ステート初期値
-
-const initial = {}; // レデューサー
+/* harmony default export */ __webpack_exports__["default"] = (fireapp);
+const initial = {};
 
 function fireReducer(state = initial, action) {
   switch (action.type) {

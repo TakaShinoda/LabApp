@@ -39,6 +39,7 @@ class Firelist extends Component {
         <tr key={i}>
           <th>{this.state.data[i].ID}</th>
           <td>{this.state.data[i].message}</td>
+          <th>{this.state.data[i].date}</th>
         </tr>
       );
     }
