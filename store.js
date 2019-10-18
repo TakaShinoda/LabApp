@@ -4,6 +4,7 @@ import firebase from "firebase";
 
 // Firebaseの初期化
 const firebaseConfig = {
+<<<<<<< HEAD
   apiKey: "AIzaSyBKzOZ9OY-eYsxHBfgE5VNH4yCnMRDOiHc",
   authDomain: "labapp-75272.firebaseapp.com",
   databaseURL: "https://labapp-75272.firebaseio.com",
@@ -11,6 +12,16 @@ const firebaseConfig = {
   storageBucket: "labapp-75272.appspot.com",
   messagingSenderId: "459562211744",
   appId: "1:459562211744:web:45726986de4b4bfd3facc5"
+=======
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
+>>>>>>> origin/master
 };
 
 var fireapp;
