@@ -2,7 +2,6 @@ import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import firebase from "firebase";
 
-// Firebaseの初期化
 const firebaseConfig = {
   apiKey: "AIzaSyBKzOZ9OY-eYsxHBfgE5VNH4yCnMRDOiHc",
   authDomain: "labapp-75272.firebaseapp.com",
@@ -22,12 +21,9 @@ try {
 
 export default fireapp;
 
-
-// ステート初期値
 const initial = {
 }
 
-// レデューサー
 function fireReducer (state = initial, action) {
   switch (action.type) {
       case 'TESTACTION':
