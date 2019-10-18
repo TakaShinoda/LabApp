@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1937,7 +1937,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   header: "header",
-  title: "title",
+  title: "\u30DB\u30FC\u30E0",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
@@ -1949,8 +1949,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 6
   },
   __self: undefined
-}, "hoge"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "./contact",
+}, "home"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "./contact_board",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
@@ -1969,7 +1969,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   },
   __self: undefined
 }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "./other",
+  href: "./garbage_rotation",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 11
@@ -2002,12 +2002,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (__jsx("style", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 2
+    lineNumber: 4
   },
   __self: undefined
 }, `
 body {
-    margin: 10px;
+    margin:10px;
+    padding:5px;
+    color:#669;
 }
 header {
     font-size:64pt;
@@ -2029,23 +2031,45 @@ footer {
     left: 10px;
 }
 h1 {
-    font-size:64pt;
+    font-size:22pt;
     font-weight:bold;
-    text-align:right;
-    letter-spacing:-8px;
-    color:#f0f0f0;
-    margin:-32px 0px;
+    text-align:left;
+    letter-spacing:0px;
+    color:#77a;
+    margin:-50px 0px 50px 0px;
 }
 p {
+      margin:0px;
+      color:#669;
+      font-size:16pt;
+}  
+hr {
+    margin:25px 0px;
+}
+tr {
     margin:0px;
-    color:#666;
-    font-size:16pt;
+}
+th {
+    font-size:14pt;
+    font-weight:plain;
+    text-align:left;
+    padding:0px 20px;
+    margin:0px;
+    border-bottom:1px solid gray;
+}
+td {
+    font-size:14pt;
+    font-weight:plain;
+    text-align:right;
+    padding:0px 20px;
+    margin:0px;
+    border-bottom:1px solid gray;
 }
 `));
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

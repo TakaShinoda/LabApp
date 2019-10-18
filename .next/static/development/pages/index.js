@@ -10409,7 +10409,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     header: "header",
-    title: "title",
+    title: "\u30DB\u30FC\u30E0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -10421,8 +10421,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 6
     },
     __self: this
-  }, "hoge"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "./contact",
+  }, "home"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "./contact_board",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -10441,7 +10441,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "./other",
+    href: "./garbage_rotation",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -10475,14 +10475,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (__jsx("style", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 2
+    lineNumber: 4
   },
   __self: undefined
-}, "\nbody {\n    margin: 10px;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#f0f0f0;\n    margin:-32px 0px;\n}\np {\n    margin:0px;\n    color:#666;\n    font-size:16pt;\n}\n"));
+}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#77a;\n    margin:-50px 0px 50px 0px;\n}\np {\n      margin:0px;\n      color:#669;\n      font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border-bottom:1px solid gray;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:right;\n    padding:0px 20px;\n    margin:0px;\n    border-bottom:1px solid gray;\n}\n"));
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Findex.js ***!
   \*************************************************************************************************************************/
@@ -10505,5 +10505,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
