@@ -17,10 +17,9 @@ header {
     margin:-32px 5px;
 }
 footer {
-    color:#99c;
-    font-size:12pt;
+    color:#a9a9a9;
+    font-size:10pt;
     text-align:right;
-    border-bottom:1px solid #99c;
     margin:50px 0px 10px 0px;
     position: relative;
     bottom: 10px;
