@@ -19,11 +19,10 @@ class Firedelete extends Component {
         })
     }
 
-    doAction(e) {
+    doAction() {
         let result = confirm('本当に削除してよろしいでしょうか？');
         if(result) {
             this.deleteFireData();
-        } else{
         }
         Router.push('/contact_board');
     }
