@@ -34,7 +34,6 @@ class Fireadd extends Component {
         Router.push('/contact_board');
     }
 
-    //最後のID取得
     getLastID() {
         let db = firebase.database();
         let ref = db.ref('sample/');
@@ -74,10 +73,11 @@ class Fireadd extends Component {
         }
         return (
             <div>
-                <textarea style={this.style} placeholder='type message....' onChange={this.doChangeMsg} value={this.state.msg_str} />
-                <button onClick={this.doAction}>
-                    新規投稿
-                </button>
+                <from>
+                    <textarea style={this.style} placeholder='type message:' onChange={this.doChangeMsg} value={this.state.msg_str} />
+                    <br />
+                    <button onClick={this.doAction}>新規投稿</button>
+                </from>
             </div>
         );
     }

@@ -40,8 +40,8 @@ class Firedelete extends Component {
             <div>
                 <p>削除する項目のID入力(半角数字)</p>
                 <form onSubmit={this.doAction}>
-                <input type='text' placeholder='delete ID:' onChange={this.doChange} value={this.state.id_str} required pattern='[0-9]+' />
-                <input type='submit' value='削除' />
+                    <input type='text' placeholder='delete ID:' onChange={this.doChange} value={this.state.id_str} required pattern='[0-9]+' />
+                    <input type='submit' value='削除' />
                 </form>
             </div>
         );
