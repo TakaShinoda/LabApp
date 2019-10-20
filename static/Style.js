@@ -13,8 +13,8 @@ header {
     font-weight:bold;
     text-align:right;
     letter-spacing:-8px;
-    color:#ddddff;
-    margin:-32px 5px;
+    color:#7BDFF2;
+    margin:-30px 5px;
 }
 footer {
     color:#a9a9a9;
@@ -31,12 +31,12 @@ h1 {
     font-weight:bold;
     text-align:left;
     letter-spacing:0px;
-    color:#77a;
-    margin:-50px 0px 50px 0px;
+    color:#3d3d3f;
+    margin:-10px 0px 50px 0px;
 }
 p {
     margin:0px;
-    color:#669;
+    color:#3d3d3f;
     font-size:16pt;
 }  
 hr {
@@ -51,6 +51,7 @@ th {
     text-align:left;
     padding:0px 5px;
     margin:0px;
+    color:#3d3d3f;
 }
 td {
     font-size:14pt;
@@ -58,14 +59,15 @@ td {
     text-align:left;
     padding:0px 20px;
     margin:0px;
-    border:solid 1px #99c;
     border-radius: 1em;
-    background-color:#e0ffff;
+    background-color:#BFF38C;
+    color:#3d3d3f;
 }
 table {
-    margin: 30px 30px;
-    padding: 10px;
+    margin: 10px 20px;
+    padding: 5px;
     border: medium inset #99c;
+    background-color:#7B93BF;
 }
 `}
 </style>;
