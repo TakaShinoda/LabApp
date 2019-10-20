@@ -64,7 +64,7 @@ function (_Component) {
   }, {
     key: "doAction",
     value: function doAction() {
-      var result = confirm('本当に削除してよろしいでしょうか？');
+      var result = confirm('本当に削除してもよろしいですか？');
 
       if (result) {
         this.deleteFireData();
@@ -63335,7 +63335,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact_del&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_del.js ***!
   \******************************************************************************************************************************************/
@@ -63358,5 +63358,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact_del.js.map

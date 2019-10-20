@@ -20,7 +20,7 @@ class Firedelete extends Component {
     }
 
     doAction() {
-        let result = confirm('本当に削除してよろしいでしょうか？');
+        let result = confirm('本当に削除してもよろしいですか？');
         if(result) {
             this.deleteFireData();
         }

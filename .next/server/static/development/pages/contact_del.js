@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -134,7 +134,7 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   doAction() {
-    let result = confirm('本当に削除してよろしいでしょうか？');
+    let result = confirm('本当に削除してもよろしいですか？');
 
     if (result) {
       this.deleteFireData();
@@ -2292,7 +2292,7 @@ table {
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!************************************!*\
   !*** multi ./pages/contact_del.js ***!
   \************************************/
