@@ -63,12 +63,12 @@ function (_Component) {
     }
   }, {
     key: "doAction",
-    value: function doAction(e) {
+    value: function doAction() {
       var result = confirm('本当に削除してよろしいでしょうか？');
 
       if (result) {
         this.deleteFireData();
-      } else {}
+      }
 
       next_router__WEBPACK_IMPORTED_MODULE_8___default.a.push('/contact_board');
     }
@@ -86,20 +86,20 @@ function (_Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         },
         __self: this
       }, __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 40
         },
         __self: this
       }, "\u524A\u9664\u3059\u308B\u9805\u76EE\u306EID\u5165\u529B(\u534A\u89D2\u6570\u5B57)"), __jsx("form", {
         onSubmit: this.doAction,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 41
         },
         __self: this
       }, __jsx("input", {
@@ -111,7 +111,7 @@ function (_Component) {
         pattern: "[0-9]+",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 42
         },
         __self: this
       }), __jsx("input", {
@@ -119,7 +119,7 @@ function (_Component) {
         value: "\u524A\u9664",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 43
         },
         __self: this
       })));
@@ -468,7 +468,7 @@ function (_Component) {
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        footer: "footerhogehoge",
+        footer: "Copyright (C) 2019 Sakamoto Laboratory.",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
@@ -63274,7 +63274,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    header: "header",
+    header: "Whiteboard",
     title: "\u6295\u7A3F\u524A\u9664",
     __source: {
       fileName: _jsxFileName,
@@ -63331,11 +63331,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 4
   },
   __self: undefined
-}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#77a;\n    margin:-50px 0px 50px 0px;\n}\np {\n    margin:0px;\n    color:#669;\n    font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:100;\n    text-align:left;\n    padding:0px 5px;\n    margin:0px;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border:solid 1px #99c;\n    border-radius: 1em;\n    background-color:#e0ffff;\n}\ntable {\n    margin: 30px 30px;\n    padding: 10px;\n    border: medium inset #99c;\n}\n"));
+}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#7BDFF2;\n    margin:-30px 5px;\n}\nfooter {\n    color:#a9a9a9;\n    font-size:10pt;\n    text-align:right;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#3d3d3f;\n    margin:-10px 0px 50px 0px;\n}\np {\n    margin:0px;\n    color:#3d3d3f;\n    font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:100;\n    text-align:left;\n    padding:0px 5px;\n    margin:0px;\n    color:#3d3d3f;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border-radius: 1em;\n    background-color:#BFF38C;\n    color:#3d3d3f;\n}\ntable {\n    margin: 10px 20px;\n    padding: 5px;\n    border: medium inset #99c;\n    background-color:#7B93BF;\n}\n"));
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact_del&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_del.js ***!
   \******************************************************************************************************************************************/
@@ -63358,5 +63358,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact_del.js.map

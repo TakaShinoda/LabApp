@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -213,7 +213,7 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      footer: "footerhogehoge",
+      footer: "Copyright (C) 2019 Sakamoto Laboratory.",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
@@ -1936,49 +1936,43 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  header: "header",
-  title: "\u30DB\u30FC\u30E0",
+  header: "Whiteboard",
+  title: "Home",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
   },
   __self: undefined
-}, __jsx("p", {
+}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "./contact_board",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 6
   },
   __self: undefined
-}, "home"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "./contact_board",
+}, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
   },
   __self: undefined
-}, __jsx("a", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
 }, "\u9023\u7D61\u677F >>")), __jsx("br", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 9
   },
   __self: undefined
 }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "./garbage_rotation",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 11
+    lineNumber: 10
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 11
   },
   __self: undefined
 }, " \u30B4\u30DF\u30ED\u30FC\u30C6 >>"))));
@@ -2016,14 +2010,13 @@ header {
     font-weight:bold;
     text-align:right;
     letter-spacing:-8px;
-    color:#ddddff;
-    margin:-32px 5px;
+    color:#7BDFF2;
+    margin:-30px 5px;
 }
 footer {
-    color:#99c;
-    font-size:12pt;
+    color:#a9a9a9;
+    font-size:10pt;
     text-align:right;
-    border-bottom:1px solid #99c;
     margin:50px 0px 10px 0px;
     position: relative;
     bottom: 10px;
@@ -2035,12 +2028,12 @@ h1 {
     font-weight:bold;
     text-align:left;
     letter-spacing:0px;
-    color:#77a;
-    margin:-50px 0px 50px 0px;
+    color:#3d3d3f;
+    margin:-10px 0px 50px 0px;
 }
 p {
     margin:0px;
-    color:#669;
+    color:#3d3d3f;
     font-size:16pt;
 }  
 hr {
@@ -2055,6 +2048,7 @@ th {
     text-align:left;
     padding:0px 5px;
     margin:0px;
+    color:#3d3d3f;
 }
 td {
     font-size:14pt;
@@ -2062,20 +2056,21 @@ td {
     text-align:left;
     padding:0px 20px;
     margin:0px;
-    border:solid 1px #99c;
     border-radius: 1em;
-    background-color:#e0ffff;
+    background-color:#BFF38C;
+    color:#3d3d3f;
 }
 table {
-    margin: 30px 30px;
-    padding: 10px;
+    margin: 10px 20px;
+    padding: 5px;
     border: medium inset #99c;
+    background-color:#7B93BF;
 }
 `));
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

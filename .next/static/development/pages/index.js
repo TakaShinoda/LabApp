@@ -190,7 +190,7 @@ function (_Component) {
         },
         __self: this
       }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        footer: "footerhogehoge",
+        footer: "Copyright (C) 2019 Sakamoto Laboratory.",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
@@ -10408,49 +10408,43 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    header: "header",
-    title: "\u30DB\u30FC\u30E0",
+    header: "Whiteboard",
+    title: "Home",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, __jsx("p", {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "./contact_board",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }, "home"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "./contact_board",
+  }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, __jsx("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
   }, "\u9023\u7D61\u677F >>")), __jsx("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "./garbage_rotation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }, __jsx("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   }, " \u30B4\u30DF\u30ED\u30FC\u30C6 >>")));
@@ -10478,11 +10472,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 4
   },
   __self: undefined
-}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#ddddff;\n    margin:-32px 5px;\n}\nfooter {\n    color:#99c;\n    font-size:12pt;\n    text-align:right;\n    border-bottom:1px solid #99c;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#77a;\n    margin:-50px 0px 50px 0px;\n}\np {\n    margin:0px;\n    color:#669;\n    font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:100;\n    text-align:left;\n    padding:0px 5px;\n    margin:0px;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border:solid 1px #99c;\n    border-radius: 1em;\n    background-color:#e0ffff;\n}\ntable {\n    margin: 30px 30px;\n    padding: 10px;\n    border: medium inset #99c;\n}\n"));
+}, "\nbody {\n    margin:10px;\n    padding:5px;\n    color:#669;\n}\nheader {\n    font-size:64pt;\n    font-weight:bold;\n    text-align:right;\n    letter-spacing:-8px;\n    color:#7BDFF2;\n    margin:-30px 5px;\n}\nfooter {\n    color:#a9a9a9;\n    font-size:10pt;\n    text-align:right;\n    margin:50px 0px 10px 0px;\n    position: relative;\n    bottom: 10px;\n    right: 10px;\n    left: 10px;\n}\nh1 {\n    font-size:22pt;\n    font-weight:bold;\n    text-align:left;\n    letter-spacing:0px;\n    color:#3d3d3f;\n    margin:-10px 0px 50px 0px;\n}\np {\n    margin:0px;\n    color:#3d3d3f;\n    font-size:16pt;\n}  \nhr {\n    margin:25px 0px;\n}\ntr {\n    margin:0px;\n}\nth {\n    font-size:14pt;\n    font-weight:100;\n    text-align:left;\n    padding:0px 5px;\n    margin:0px;\n    color:#3d3d3f;\n}\ntd {\n    font-size:14pt;\n    font-weight:plain;\n    text-align:left;\n    padding:0px 20px;\n    margin:0px;\n    border-radius: 1em;\n    background-color:#BFF38C;\n    color:#3d3d3f;\n}\ntable {\n    margin: 10px 20px;\n    padding: 5px;\n    border: medium inset #99c;\n    background-color:#7B93BF;\n}\n"));
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!*************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Findex.js ***!
   \*************************************************************************************************************************/
@@ -10505,5 +10499,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

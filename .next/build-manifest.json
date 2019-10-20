@@ -16,15 +16,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/contact_add": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/contact_board": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/contact_del": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/garbage_rotation": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

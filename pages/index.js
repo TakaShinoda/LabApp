@@ -2,8 +2,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 export default () => (
-    <Layout header='header' title='ホーム'>
-        <p>home</p>
+    <Layout header='Whiteboard' title='Home'>
         <Link href='./contact_board'>
             <a>連絡板 &gt;&gt;</a>
         </Link>

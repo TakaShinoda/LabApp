@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -133,12 +133,12 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
-  doAction(e) {
+  doAction() {
     let result = confirm('本当に削除してよろしいでしょうか？');
 
     if (result) {
       this.deleteFireData();
-    } else {}
+    }
 
     next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/contact_board');
   }
@@ -154,20 +154,20 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40
+        lineNumber: 39
       },
       __self: this
     }, __jsx("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 40
       },
       __self: this
     }, "\u524A\u9664\u3059\u308B\u9805\u76EE\u306EID\u5165\u529B(\u534A\u89D2\u6570\u5B57)"), __jsx("form", {
       onSubmit: this.doAction,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 41
       },
       __self: this
     }, __jsx("input", {
@@ -179,7 +179,7 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       pattern: "[0-9]+",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 42
       },
       __self: this
     }), __jsx("input", {
@@ -187,7 +187,7 @@ class Firedelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       value: "\u524A\u9664",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 43
       },
       __self: this
     })));
@@ -438,7 +438,7 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      footer: "footerhogehoge",
+      footer: "Copyright (C) 2019 Sakamoto Laboratory.",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
@@ -2165,7 +2165,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  header: "header",
+  header: "Whiteboard",
   title: "\u6295\u7A3F\u524A\u9664",
   __source: {
     fileName: _jsxFileName,
@@ -2232,14 +2232,13 @@ header {
     font-weight:bold;
     text-align:right;
     letter-spacing:-8px;
-    color:#ddddff;
-    margin:-32px 5px;
+    color:#7BDFF2;
+    margin:-30px 5px;
 }
 footer {
-    color:#99c;
-    font-size:12pt;
+    color:#a9a9a9;
+    font-size:10pt;
     text-align:right;
-    border-bottom:1px solid #99c;
     margin:50px 0px 10px 0px;
     position: relative;
     bottom: 10px;
@@ -2251,12 +2250,12 @@ h1 {
     font-weight:bold;
     text-align:left;
     letter-spacing:0px;
-    color:#77a;
-    margin:-50px 0px 50px 0px;
+    color:#3d3d3f;
+    margin:-10px 0px 50px 0px;
 }
 p {
     margin:0px;
-    color:#669;
+    color:#3d3d3f;
     font-size:16pt;
 }  
 hr {
@@ -2271,6 +2270,7 @@ th {
     text-align:left;
     padding:0px 5px;
     margin:0px;
+    color:#3d3d3f;
 }
 td {
     font-size:14pt;
@@ -2278,20 +2278,21 @@ td {
     text-align:left;
     padding:0px 20px;
     margin:0px;
-    border:solid 1px #99c;
     border-radius: 1em;
-    background-color:#e0ffff;
+    background-color:#BFF38C;
+    color:#3d3d3f;
 }
 table {
-    margin: 30px 30px;
-    padding: 10px;
+    margin: 10px 20px;
+    padding: 5px;
     border: medium inset #99c;
+    background-color:#7B93BF;
 }
 `));
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!************************************!*\
   !*** multi ./pages/contact_del.js ***!
   \************************************/

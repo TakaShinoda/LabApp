@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import Firelist from '../components/Firelist';
-
+import Button from '@material-ui/core/Button';
 
 export default () => (
-    <Layout header='header' title='連絡板'>
+    <Layout header='Whiteboard' title='連絡板'>
         <Firelist />
         <br />
         <Link href='/contact_add'>
-            <button>新規作成</button>
+            <Button variant="contained" color="primary">新規作成</Button>
         </Link>
+        &nbsp;
         <Link href='/contact_del'>
-            <button>投稿削除</button>
+            <Button variant="contained">投稿削除</Button>
         </Link>
         <br />
         <Link href='/'>
