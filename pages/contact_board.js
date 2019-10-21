@@ -8,7 +8,7 @@ export default () => (
         <Firelist />
         <br />
         <Link href='/contact_add'>
-            <Button variant="contained" color="primary">新規作成</Button>
+            <Button variant="contained" color="primary">新規投稿</Button>
         </Link>
         &nbsp;
         <Link href='/contact_del'>
