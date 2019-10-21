@@ -1,6 +1,9 @@
 # Whiteboard
 研究室で使うWebアプリケーション
 連絡板、ゴミ捨てローテーション管理のWeb化
+- React
+- Next.js
+- Firebase
 ## components
 Reactのコンポーネント関係をまとめる
 ## pages
