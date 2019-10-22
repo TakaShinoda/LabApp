@@ -31,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/lib/redux-store.js";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/lib/redux-store.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
 
@@ -64618,7 +64618,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/pages/_app.js";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 

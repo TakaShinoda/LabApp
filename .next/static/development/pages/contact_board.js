@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Firelist.jsx";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Firelist.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -166,7 +166,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Footer.jsx";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Footer.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -228,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Header.jsx";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Header.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -299,7 +299,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/components/Layout.jsx";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Layout.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -66857,10 +66857,10 @@ var index = create();
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_board.js!./":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_board.js ***!
-  \******************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FWhiteboard%2Fpages%2Fcontact_board.js!./":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FWhiteboard%2Fpages%2Fcontact_board.js ***!
+  \**********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -74845,7 +74845,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 /* harmony import */ var _components_Firelist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Firelist */ "./components/Firelist.jsx");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/pages/contact_board.js";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/pages/contact_board.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -74888,7 +74888,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 11
     },
     __self: this
-  }, "\u65B0\u898F\u4F5C\u6210")), "\xA0", __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "\u65B0\u898F\u6295\u7A3F")), "\xA0", __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/contact_del",
     __source: {
       fileName: _jsxFileName,
@@ -74937,7 +74937,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/shinoda/Desktop/LabApp/static/Style.js";
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/static/Style.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (__jsx("style", {
@@ -74950,14 +74950,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /***/ }),
 
-/***/ 1:
-/*!**********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_board.js ***!
-  \**********************************************************************************************************************************************/
+/***/ 0:
+/*!**************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FWhiteboard%2Fpages%2Fcontact_board.js ***!
+  \**************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_board.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FLabApp%2Fpages%2Fcontact_board.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FWhiteboard%2Fpages%2Fcontact_board.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcontact_board&absolutePagePath=%2FUsers%2Fshinoda%2FDesktop%2FWhiteboard%2Fpages%2Fcontact_board.js!./");
 
 
 /***/ }),
@@ -74973,5 +74973,5 @@ module.exports = dll_b35e09dc2ca94ac6d9c1;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact_board.js.map

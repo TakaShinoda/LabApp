@@ -4,6 +4,10 @@
     "static/development/dll/dll_f5e771ca4390fecd21bd.js.map"
   ],
   "pages": {
+    "/": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
@@ -16,7 +20,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/contact_del": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
