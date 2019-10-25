@@ -8,7 +8,11 @@ export default () => (
         </Link>
         <br />
         <Link href='./garbage_rotation'>
-            <a> ゴミローテ &gt;&gt;</a>
+            <a>ゴミローテ &gt;&gt;</a>
+        </Link>
+        <br />
+        <Link href='./admin'>
+            <a>Admin</a>
         </Link>
     </Layout>
 );
