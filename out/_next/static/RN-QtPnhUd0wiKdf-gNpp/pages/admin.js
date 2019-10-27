@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{Ho3L:function(n,o,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/admin",function(){return t("IT5z")}])},IT5z:function(n,o,t){"use strict";t.r(o);var u=t("q1tI"),e=t.n(u).a.createElement;o.default=function(){return e("h1",null,"\u7ba1\u7406\u8005\u753b\u9762")}}},[["Ho3L",1,0]]]);
