@@ -88,127 +88,146 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Firelist.jsx":
-/*!*********************************!*\
-  !*** ./components/Firelist.jsx ***!
-  \*********************************/
+/***/ "./components/Fireadd.jsx":
+/*!********************************!*\
+  !*** ./components/Fireadd.jsx ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase */ "firebase");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ "firebase/storage");
-/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_storage__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Firelist.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase */ "firebase");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/storage */ "firebase/storage");
+/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase_storage__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Fireadd.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
-class Firelist extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+
+class Fireadd extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(props) {
     super(props);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "style", {
+      heigth: '7em',
+      width: '350px',
+      lineHeight: '1.5em'
+    });
+
     this.state = {
+      msg_str: '',
+      lastID: -1,
       data: []
     };
-    this.getFireData();
+    this.getLastID();
+    this.doChangeMsg = this.doChangeMsg.bind(this);
+    this.doAction = this.doAction.bind(this);
   }
 
-  getFireData() {
-    let db = firebase__WEBPACK_IMPORTED_MODULE_1___default.a.database();
-    let ref = db.ref("sample/");
-    let self = this;
-    ref.orderByKey().limitToLast(10).on("value", snapshot => {
-      self.setState({
-        data: snapshot.val()
-      });
+  doChangeMsg(e) {
+    this.setState({
+      msg_str: e.target.value
     });
   }
 
-  getTableData() {
-    let result = [];
+  doAction(e) {
+    this.addFireData();
+    next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/contact_board');
+  }
 
-    if (this.state.data == null || this.state.data.length == 0) {
-      return [__jsx("tr", {
-        key: "0",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, __jsx("th", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, "NO DATA"))];
+  getLastID() {
+    let db = firebase__WEBPACK_IMPORTED_MODULE_2___default.a.database();
+    let ref = db.ref('sample/');
+    let self = this;
+    ref.orderByKey().limitToLast(1).on("value", snapshot => {
+      let res = snapshot.val();
+
+      for (let i in res) {
+        self.setState({
+          lastID: i
+        });
+        return;
+      }
+    });
+  }
+
+  addFireData() {
+    if (this.state.lastID == -1) {
+      return;
     }
 
-    for (let i in this.state.data) {
-      result.push(__jsx("tr", {
-        key: i,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, __jsx("th", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }, this.state.data[i].ID), __jsx("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        },
-        __self: this
-      }, this.state.data[i].message), __jsx("th", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        },
-        __self: this
-      }, this.state.data[i].date)));
-    }
-
-    return result;
+    let id = this.state.lastID * 1 + 1;
+    let db = firebase__WEBPACK_IMPORTED_MODULE_2___default.a.database();
+    let date = new Date().toString().slice(4, 10);
+    let ref = db.ref('/sample/' + id);
+    ref.set({
+      ID: id,
+      message: this.state.msg_str,
+      date: date
+    });
   }
 
   render() {
-    if (this.state.data.length == 0) {
-      this.getFireData();
+    if (this.state.lastID == -1) {
+      this.getLastID();
     }
 
-    return __jsx("table", {
+    return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 75
       },
       __self: this
-    }, __jsx("tbody", {
+    }, __jsx("from", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 76
       },
       __self: this
-    }, this.getTableData()));
+    }, __jsx("textarea", {
+      style: this.style,
+      placeholder: "type message:",
+      onChange: this.doChangeMsg,
+      value: this.state.msg_str,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: this
+    }), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }), __jsx("button", {
+      onClick: this.doAction,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }, "\u65B0\u898F\u6295\u7A3F")));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Firelist);
+/* harmony default export */ __webpack_exports__["default"] = (Fireadd);
 
 /***/ }),
 
@@ -421,6 +440,36 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/promise */ "core-js/library/fn/promise");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 /***/ }),
 
@@ -2035,10 +2084,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/contact_board.js":
-/*!********************************!*\
-  !*** ./pages/contact_board.js ***!
-  \********************************/
+/***/ "./pages/contact_add.js":
+/*!******************************!*\
+  !*** ./pages/contact_add.js ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2049,82 +2098,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
-/* harmony import */ var _components_Firelist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Firelist */ "./components/Firelist.jsx");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/pages/contact_board.js";
+/* harmony import */ var _components_Fireadd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Fireadd */ "./components/Fireadd.jsx");
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/pages/contact_add.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   header: "Whiteboard",
-  title: "\u9023\u7D61\u677F",
+  title: "\u65B0\u898F\u6295\u7A3F",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx(_components_Fireadd__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
   },
   __self: undefined
-}, __jsx(_components_Firelist__WEBPACK_IMPORTED_MODULE_3__["default"], {
+}), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "/contact_board",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8
   },
   __self: undefined
-}), __jsx("br", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-}), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/contact_add",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
-  variant: "contained",
-  color: "primary",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "\u65B0\u898F\u6295\u7A3F")), "\xA0", __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/contact_del",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14
-  },
-  __self: undefined
-}, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
-  variant: "contained",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-}, "\u6295\u7A3F\u524A\u9664")), __jsx("br", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
-  },
-  __self: undefined
-}), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18
-  },
-  __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 9
   },
   __self: undefined
 }, "<< \u623B\u308B"))));
@@ -2222,26 +2227,15 @@ table {
 
 /***/ }),
 
-/***/ 4:
-/*!**************************************!*\
-  !*** multi ./pages/contact_board.js ***!
-  \**************************************/
+/***/ 5:
+/*!************************************!*\
+  !*** multi ./pages/contact_add.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/shinoda/Desktop/Whiteboard/pages/contact_board.js */"./pages/contact_board.js");
+module.exports = __webpack_require__(/*! /Users/shinoda/Desktop/Whiteboard/pages/contact_add.js */"./pages/contact_add.js");
 
-
-/***/ }),
-
-/***/ "@material-ui/core/Button":
-/*!*******************************************!*\
-  !*** external "@material-ui/core/Button" ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 
@@ -2344,6 +2338,17 @@ module.exports = require("firebase/storage");
 
 /***/ }),
 
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -2400,4 +2405,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=contact_board.js.map
+//# sourceMappingURL=contact_add.js.map

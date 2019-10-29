@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1975,7 +1975,26 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     lineNumber: 11
   },
   __self: undefined
-}, " \u30B4\u30DF\u30ED\u30FC\u30C6 >>"))));
+}, "\u30B4\u30DF\u30ED\u30FC\u30C6 >>")), __jsx("br", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  href: "./admin",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}, __jsx("a", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
+}, "Admin"))));
 
 /***/ }),
 
@@ -2070,7 +2089,7 @@ table {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

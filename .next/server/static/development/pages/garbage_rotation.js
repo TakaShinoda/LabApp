@@ -88,129 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/Firelist.jsx":
-/*!*********************************!*\
-  !*** ./components/Firelist.jsx ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase */ "firebase");
-/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/storage */ "firebase/storage");
-/* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_storage__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Firelist.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-class Firelist extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: []
-    };
-    this.getFireData();
-  }
-
-  getFireData() {
-    let db = firebase__WEBPACK_IMPORTED_MODULE_1___default.a.database();
-    let ref = db.ref("sample/");
-    let self = this;
-    ref.orderByKey().limitToLast(10).on("value", snapshot => {
-      self.setState({
-        data: snapshot.val()
-      });
-    });
-  }
-
-  getTableData() {
-    let result = [];
-
-    if (this.state.data == null || this.state.data.length == 0) {
-      return [__jsx("tr", {
-        key: "0",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, __jsx("th", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, "NO DATA"))];
-    }
-
-    for (let i in this.state.data) {
-      result.push(__jsx("tr", {
-        key: i,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, __jsx("th", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }, this.state.data[i].ID), __jsx("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        },
-        __self: this
-      }, this.state.data[i].message), __jsx("th", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        },
-        __self: this
-      }, this.state.data[i].date)));
-    }
-
-    return result;
-  }
-
-  render() {
-    if (this.state.data.length == 0) {
-      this.getFireData();
-    }
-
-    return __jsx("table", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54
-      },
-      __self: this
-    }, __jsx("tbody", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55
-      },
-      __self: this
-    }, this.getTableData()));
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Firelist);
-
-/***/ }),
 
 /***/ "./components/Footer.jsx":
 /*!*******************************!*\
@@ -344,6 +225,50 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/Memberlist.jsx":
+/*!***********************************!*\
+  !*** ./components/Memberlist.jsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/components/Memberlist.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Memberlist extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, __jsx("ui", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, "\u3042")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Memberlist);
 
 /***/ }),
 
@@ -2035,10 +1960,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/contact_board.js":
-/*!********************************!*\
-  !*** ./pages/contact_board.js ***!
-  \********************************/
+/***/ "./pages/garbage_rotation.js":
+/*!***********************************!*\
+  !*** ./pages/garbage_rotation.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2049,82 +1974,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
-/* harmony import */ var _components_Firelist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Firelist */ "./components/Firelist.jsx");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/pages/contact_board.js";
+/* harmony import */ var _components_Memberlist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Memberlist */ "./components/Memberlist.jsx");
+var _jsxFileName = "/Users/shinoda/Desktop/Whiteboard/pages/garbage_rotation.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 /* harmony default export */ __webpack_exports__["default"] = (() => __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
   header: "Whiteboard",
-  title: "\u9023\u7D61\u677F",
+  title: "\u30B4\u30DF\u30ED\u30FC\u30C6\u30FC\u30B7\u30E7\u30F3",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx(_components_Memberlist__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 7
-  },
-  __self: undefined
-}, __jsx(_components_Firelist__WEBPACK_IMPORTED_MODULE_3__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}), __jsx("br", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-}), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/contact_add",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
-  variant: "contained",
-  color: "primary",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}, "\u65B0\u898F\u6295\u7A3F")), "\xA0", __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: "/contact_del",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14
-  },
-  __self: undefined
-}, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
-  variant: "contained",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15
-  },
-  __self: undefined
-}, "\u6295\u7A3F\u524A\u9664")), __jsx("br", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17
   },
   __self: undefined
 }), __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
   href: "/",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 8
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 9
   },
   __self: undefined
 }, "<< \u623B\u308B"))));
@@ -2222,26 +2103,15 @@ table {
 
 /***/ }),
 
-/***/ 4:
-/*!**************************************!*\
-  !*** multi ./pages/contact_board.js ***!
-  \**************************************/
+/***/ 7:
+/*!*****************************************!*\
+  !*** multi ./pages/garbage_rotation.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/shinoda/Desktop/Whiteboard/pages/contact_board.js */"./pages/contact_board.js");
+module.exports = __webpack_require__(/*! /Users/shinoda/Desktop/Whiteboard/pages/garbage_rotation.js */"./pages/garbage_rotation.js");
 
-
-/***/ }),
-
-/***/ "@material-ui/core/Button":
-/*!*******************************************!*\
-  !*** external "@material-ui/core/Button" ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 
@@ -2322,28 +2192,6 @@ module.exports = require("core-js/library/fn/promise");
 
 /***/ }),
 
-/***/ "firebase":
-/*!***************************!*\
-  !*** external "firebase" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase");
-
-/***/ }),
-
-/***/ "firebase/storage":
-/*!***********************************!*\
-  !*** external "firebase/storage" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/storage");
-
-/***/ }),
-
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -2400,4 +2248,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=contact_board.js.map
+//# sourceMappingURL=garbage_rotation.js.map
