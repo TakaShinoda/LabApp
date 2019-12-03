@@ -3,8 +3,6 @@ import Layout from '../components/Layout';
 import Firedelete from '../components/Firedelete';
 import Firelist from '../components/Firelist';
 
-
-
 export default () => (
     <Layout header='Whiteboard' title='投稿削除'>
         <Firedelete />
