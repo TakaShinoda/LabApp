@@ -5,7 +5,7 @@ class Memberlist extends Component {
         return (
             <div>
                 <ui>
-                    <li>あ</li>
+                    <li>準備中</li>
                 </ui>
             </div>
         )
